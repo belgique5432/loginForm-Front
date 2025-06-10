@@ -2,6 +2,7 @@ import './App.css'
 import { useState } from 'react';
 import {BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom'
 import party from './assets/party.webp'
+import { API_URL } from './config';
 
 function LoginForm() {
   const [username, setUsername] = useState('');
@@ -17,7 +18,7 @@ function LoginForm() {
     formData.append('password', password);
 
     try {
-      const response = await fetch('http://localhost:8000/token', {
+      const response = await fetch(`${API_URL}/token`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -81,7 +82,7 @@ function Register() {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/create_user', {
+      const response = await fetch(`${API_URL}/create_user`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
