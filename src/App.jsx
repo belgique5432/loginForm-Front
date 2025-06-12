@@ -4,6 +4,8 @@ import {BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom'
 import party from './assets/party.webp'
 import { API_URL } from './config';
 
+console.log("API_URL:", API_URL);
+
 function LoginForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
