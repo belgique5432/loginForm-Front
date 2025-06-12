@@ -20,6 +20,7 @@ function LoginForm() {
     try {
       const response = await fetch(`${API_URL}/token`, {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -84,6 +85,7 @@ function Register() {
     try {
       const response = await fetch(`${API_URL}/create_user`, {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
