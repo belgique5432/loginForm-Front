@@ -20,7 +20,7 @@ function LoginForm() {
     formData.append('password', password);
 
     try {
-      const response = await fetch(`${API_URL}/token`, {
+      const response = await fetch(`https://loginform-back.onrender.com/api/token`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -85,7 +85,7 @@ function Register() {
     }
 
     try {
-      const response = await fetch(`${API_URL}/create_user`, {
+      const response = await fetch(`https://loginform-back.onrender.com/api/create_user`, {
         method: 'POST',
         credentials: 'include',
         headers: {
